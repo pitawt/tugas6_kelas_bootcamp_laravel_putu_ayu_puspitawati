@@ -16,3 +16,12 @@ Route::get('/register','AuthController@register');
 Route::post('/kirim','AuthController@proses');
 
 Route::get('/data-tables','IndexController@tabel');
+
+//UNTUK DATA CAST
+Route::get('/cast','CastController@index');
+Route::get('/cast/create','CastController@create');
+Route::post('/cast/store','CastController@store');
+Route::get('/cast/{cast_id}','CastController@show');
+Route::get('/cast/{cast_id}/edit','CastController@edit');
+Route::put('/cast/{cast_id}','CastController@update');
+Route::delete('/cast/{cast_id}','CastController@destroy');
